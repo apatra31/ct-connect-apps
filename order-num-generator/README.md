@@ -2,14 +2,14 @@
   <a href="https://commercetools.com/">
     <img alt="commercetools logo" src="https://unpkg.com/@commercetools-frontend/assets/logos/commercetools_primary-logo_horizontal_RGB.png">
   </a></br>
-  <b>Connect Application Starter in TypeScript</b>
+  <b>Connect Application Starter in JavaScript</b>
 </p>
 
-This is the `starter-typescript` template to develop [connect applications](https://marketplace.commercetools.com/) in TypeScript.
+This is the `starter` template to develop [connect applications](https://marketplace.commercetools.com/) in JavaSript.
 
 ## Instructions
 
-Use `create-connect-app` cli with `starter-typescript` as `template` value to download this template repository to build the integration application , folder structure needs to be followed to ensure certification & deployment from commercetools connect team as stated [here](https://github.com/commercetools/connect-application-kit#readme) 
+Use `create-connect-app` cli with `starter` as `template` value to download this template repository to build the integration application , folder structure needs to be followed to ensure certification & deployment from commercetools connect team as stated [here](https://github.com/commercetools/connect-application-kit#readme) 
 
 ## Architecture principles for building an connect application 
 

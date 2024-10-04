@@ -5,7 +5,6 @@ coverage
 *.tfvars
 
 .DS_Store
-.vscode
-build/
+
+dist/
 .env
-public/
