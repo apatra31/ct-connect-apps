@@ -11,9 +11,12 @@ export async function updateOrderNumber(orderId) {
             body: order
         }).execute();
     } else {
-        order.orderNumber = Math.floor(Math.random() * 1000000).toString();
-        await apiRoot.orders().withId({ ID: orderId }).post({
-            body: order
+        const orderNumber = Math.floor(Math.random() * 1000000).toString();
+        updatedOrder = await apiRoot.orders().withId({ ID: orderId }).post({
+            body: {
+                ...order,
+                orderNumber: orderNumber
+            }
         }).execute();
     }
     return order;
@@ -24,7 +27,7 @@ async function getOrderById(orderId) {
 }
 
 async function getLastOrderDetails() {
-    return (await apiRoot.orders().get(
+    const lastOrder = (await apiRoot.orders().get(
         {
             queryArgs: {
                 sort: 'createdAt desc',
@@ -32,4 +35,5 @@ async function getLastOrderDetails() {
             }
         }
     ).execute()).body;
+    return lastOrder;
 }
