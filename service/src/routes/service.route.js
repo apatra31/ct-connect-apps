@@ -1,17 +1,11 @@
 import { Router } from 'express';
-import { logger } from '../utils/logger.utils.js';
-import { post } from '../controllers/service.controller.js';
+import { updateOrderNumber } from "../service.js";
 
 const serviceRouter = Router();
 
-serviceRouter.post('/', async (req, res, next) => {
-  logger.info('Cart update extension executed');
-
-  try {
-    await post(req, res);
-  } catch (error) {
-    next(error);
-  }
+serviceRouter.use('/generate-order-number/:id', async (req, res) => {
+  await updateOrderNumber(req.params.id);
+  res.status(200).send('Order number generated');
 });
 
 export default serviceRouter;
