@@ -4,8 +4,11 @@ import { updateOrderNumber } from "../service.js";
 const serviceRouter = Router();
 
 serviceRouter.use('/generate-order-number/:id', async (req, res) => {
-  await updateOrderNumber(req.params.id);
-  res.status(200).send('Order number generated');
+  const { status, updatedOrder, exception } = await updateOrderNumber(req.params.id);
+  if (updatedOrder)
+    res.status(status).send('Order number generated');
+  else
+    res.status(status).send(exception.message);
 });
 
 export default serviceRouter;
