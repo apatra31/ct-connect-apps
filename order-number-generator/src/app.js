@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 // Define routes
-app.put('/generate-order-number/:id', ServiceRoutes);
+app.post('/', ServiceRoutes);
 
 
 export default app;
