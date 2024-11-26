@@ -3,11 +3,11 @@ config();
 import { ClientBuilder } from '@commercetools/sdk-client-v2';
 import { createApiBuilderFromCtpClient } from "@commercetools/platform-sdk";
 
-export const projectKey = "ct-pocs";//process.env.CTP_PROJECT_KEY;
-const clientId = "ClpFKAXQSI__VjBUZinxdr8o";//process.env.CTP_CLIENT_ID;
-const clientSecret = "hSagsIuUI5_aB5WST-TXStTnCZP4YKcp";//process.env.CTP_CLIENT_SECRET;
-const apiUrl = "https://api.europe-west1.gcp.commercetools.com";//process.env.CTP_HOST;
-const authUrl = "https://auth.europe-west1.gcp.commercetools.com";//process.env.CTP_AUTH;
+export const projectKey = process.env.CTP_PROJECT_KEY;
+const clientId = process.env.CTP_CLIENT_ID;
+const clientSecret = process.env.CTP_CLIENT_SECRET;
+const apiUrl = process.env.CTP_HOST;
+const authUrl = process.env.CTP_AUTH;
 
 const authMiddlewareOptions = {
     host: authUrl,
