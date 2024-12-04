@@ -5,7 +5,7 @@ import { createApiBuilderFromCtpClient } from "@commercetools/platform-sdk";
 
 export const projectKey = process.env.CTP_PROJECT_KEY;
 const clientId = process.env.CTP_CLIENT_ID;
-const clientSecret = process.env.CTP_CLIENT_SECRET;
+const clientSecret = process.env.CTP_CLIENT_SECRET ?? "";
 const apiUrl = process.env.CTP_HOST;
 const authUrl = process.env.CTP_AUTH;
 
