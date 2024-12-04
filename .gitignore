@@ -5,6 +5,6 @@ coverage
 *.tfvars
 
 .DS_Store
-
+pack*lock.json
 dist/
 .env
